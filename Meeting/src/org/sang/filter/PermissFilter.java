@@ -18,7 +18,7 @@ public class PermissFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
         String servletPath = req.getServletPath();
-        if ("/login.jsp".equals(servletPath) || "/reg".equals(servletPath) || "/doreg".equals(servletPath) || "/login".equals(servletPath)) {
+        if ("/login.jsp".equals(servletPath) || "/reg".equals(servletPath) || "/doreg".equals(servletPath) || "/login".equals(servletPath) || servletPath.contains("/images/") || servletPath.contains("/js/") || servletPath.contains("/My97DatePicker/") || servletPath.contains("/styles/")) {
             chain.doFilter(req, response);
         } else {
             Object loginUser = req.getSession().getAttribute("loginUser");
