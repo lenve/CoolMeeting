@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="gson-2.8.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/gson-2.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mchange-commons-java-0.2.3.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/standard.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

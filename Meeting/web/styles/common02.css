@@ -1,0 +1,91 @@
+/*通用样式*/
+* {
+    font-family:寰蒋闆呴粦, Arial;
+   
+    font-size:15.5px;
+}
+/*body的样式*/
+body{
+    background-color:lightgray;
+}
+/*链接的样式*/
+a{
+    color:gray;
+    text-decoration:none;
+}
+/*伪类*/
+a:hover{
+    color:red;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+a:visited{
+    text-decoration:none;
+}
+
+img{
+    height:100%;
+    vertical-align:middle;
+}
+
+fieldset{
+    padding:10px;
+}
+
+legend{
+    font-size:16px;
+    font-weight:bold;
+}
+
+input[type="text"]{
+    width:150px;
+}
+
+input[type="password"]{
+    width:150px;
+}
+
+textarea{
+    width:80%;
+    text-align:left;
+}
+
+h1, h2, h3 {
+    text-align:center;
+}
+
+.page-body{
+    padding:10px;
+}
+
+.page-sidebar{
+	 
+	text-align:left;
+    width:150px;
+   
+}
+
+.page-content{
+    width:830px;
+    
+}
+
+
+.sidebar-grouptitle{
+    width:100%;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+	
+}
+
+.sidebar-menu{
+	letter-spacing:3px;
+    list-style:none;
+    padding-left:20px;
+}
+
+
+
+

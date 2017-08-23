@@ -1,0 +1,220 @@
+* {
+    font-family:微软雅黑, Arial;
+    padding: 0;
+    margin: 0;
+    font-size:14px;
+}
+
+body{
+    width:1000px;
+    margin:10px auto;
+    background-color:lightgray;
+}
+
+a{
+    color:gray;
+    text-decoration:none;
+}
+
+a:hover{
+    color:red;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+a:visited{
+    text-decoration:none;
+}
+
+img{
+    height:100%;
+    vertical-align:middle;
+}
+
+fieldset{
+    padding:10px;
+}
+
+legend{
+    font-size:16px;
+    font-weight:bold;
+}
+
+input[type="text"]{
+    width:150px;
+}
+
+input[type="password"]{
+    width:150px;
+}
+
+textarea{
+    width:80%;
+    text-align:left;
+}
+
+h1, h2, h3 {
+    text-align:center;
+}
+
+.page-header{
+    position:relative;
+    height:60px;
+    background-color:#b0b0b0;
+    border-radius:10px;   
+    margin-bottom:10px;
+    padding:10px;
+}
+
+.page-header .header-banner{
+    float:left;
+    width:20%;
+    vertical-align:middle;
+    height:100%;
+}
+
+.page-header .header-title{
+    float:left;
+    width:60%;
+    text-align:center;
+    font-size:28px;
+    padding-top:10px;
+}
+
+.page-header .header-quicklink{
+    float:right;
+    padding-top:40px;
+}
+
+.page-body{
+    padding:10px;
+}
+
+.page-sidebar{
+    width:150px;
+    float:left;
+}
+
+.page-content{
+    width:830px;
+    float:right;
+}
+
+.page-footer{
+    clear:both;
+    height:60px;
+    text-align:center;
+    padding-top:20px;
+}
+
+.sidebar-menugroup{
+    padding-bottom:10px;
+}
+
+.sidebar-grouptitle{
+    width:100%;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.sidebar-menu{
+    list-style:none;
+    padding-left:20px;
+}
+
+.page-content .content-nav{
+    padding:0 0 10px 0;
+}
+
+.listtable{
+    width:100%;
+    border:1px solid #afafaf;
+    border-collapse:collapse;
+    margin-bottom:10px;
+}
+
+.listtable caption{
+    text-align:left;
+    font-size:16px;
+    padding:2px;
+    font-weight:bold;
+}
+
+.listtable td{
+    padding:5px;
+    border: 1px solid gray;
+    font-size:12px;
+    text-align:center;
+}
+
+.listtable tr:nth-child(2n){
+    background-color : #ebeaea;
+}
+
+.listtable .listheader{
+    background-color:skyblue;
+    text-align:center;
+}
+
+.listtable .listheader th{
+    padding:5px;
+    border: 1px solid gray;
+}
+
+.formtable {
+    width:100%;
+    padding: 0 auto;
+}
+
+.formtable td{
+    padding:5px;
+}
+
+.formtable tr td:first-child{
+    vertical-align:top;
+}
+
+.formtable input[type="radio"] + label{
+    margin-right:10px;
+}
+
+.formtable .command{
+    text-align:center;
+}
+
+.formtable .command .clickbutton{
+    margin:0 10px;
+}
+
+.pager-header{
+    
+}
+
+.pager-header .header-info{
+    float:left;
+}
+
+.pager-header .header-info .info-number{
+    font-weight:bold;
+}
+
+.pager-header .header-nav{
+    float:right;
+}
+
+.pager-header .header-nav .nav-number{
+    width:30px;
+    margin:0 5px;
+}
+
+.clickbutton {  
+    border: 1px solid #4D4D4D;
+    padding: 2px 10px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.error {
+    color:red;
+}
