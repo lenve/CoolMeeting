@@ -2,7 +2,7 @@
 涉及到的技术点：
 >1.jQuery、Ajax  
 >2.jsp  
->3.Serlvet、Filter、Listener  
+>3.Servlet、Filter、Listener  
 >4.MySql  
 >5.JDBC  
 
