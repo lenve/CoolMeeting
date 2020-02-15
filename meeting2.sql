@@ -35,7 +35,7 @@ CREATE TABLE `department` (
   `departmentid` int(16) NOT NULL AUTO_INCREMENT,
   `departmentname` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`departmentid`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 /*Data for the table `department` */
 
@@ -56,7 +56,7 @@ CREATE TABLE `employee` (
   `password` varchar(50) DEFAULT NULL,
   `role` varchar(12) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`employeeid`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 
 /*Data for the table `employee` */
 
@@ -93,7 +93,7 @@ DROP TABLE IF EXISTS `meetingparticipants`;
 CREATE TABLE `meetingparticipants` (
   `meetingid` int(16) NOT NULL,
   `employeeid` int(16) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `meetingparticipants` */
 
@@ -111,7 +111,7 @@ CREATE TABLE `meetingroom` (
   `status` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
   `description` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`roomid`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 /*Data for the table `meetingroom` */
 
