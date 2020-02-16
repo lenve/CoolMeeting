@@ -1,6 +1,6 @@
 /*
-SQLyog Ultimate v12.08 (64 bit)
-MySQL - 5.7.17-log : Database - meeting
+SQLyog Ultimate v12.08 (32 bit)
+MySQL - 8.0.18 : Database - meeting
 *********************************************************************
 */
 
@@ -9,9 +9,10 @@ MySQL - 5.7.17-log : Database - meeting
 /*!40101 SET SQL_MODE=''*/;
 
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`meeting` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`meeting` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 
 USE `meeting`;
 
@@ -20,12 +21,14 @@ USE `meeting`;
 DROP TABLE IF EXISTS `counter`;
 
 CREATE TABLE `counter` (
-  `visitcount` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `visitcount` int(11) DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*Data for the table `counter` */
 
-insert  into `counter`(`visitcount`) values (105);
+insert  into `counter`(`visitcount`,`id`) values (105,1);
 
 /*Table structure for table `department` */
 
@@ -33,7 +36,7 @@ DROP TABLE IF EXISTS `department`;
 
 CREATE TABLE `department` (
   `departmentid` int(16) NOT NULL AUTO_INCREMENT,
-  `departmentname` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
+  `departmentname` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`departmentid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
@@ -47,14 +50,14 @@ DROP TABLE IF EXISTS `employee`;
 
 CREATE TABLE `employee` (
   `employeeid` int(16) NOT NULL AUTO_INCREMENT,
-  `employeename` varchar(14) CHARACTER SET utf8 DEFAULT NULL,
-  `username` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
+  `employeename` varchar(14) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `username` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `phone` varchar(20) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
-  `status` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
+  `status` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `departmentid` int(16) DEFAULT NULL,
   `password` varchar(50) DEFAULT NULL,
-  `role` varchar(12) CHARACTER SET utf8 DEFAULT NULL,
+  `role` varchar(12) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`employeeid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 
@@ -68,7 +71,7 @@ DROP TABLE IF EXISTS `meeting`;
 
 CREATE TABLE `meeting` (
   `meetingid` int(16) NOT NULL AUTO_INCREMENT,
-  `meetingname` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
+  `meetingname` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `roomid` int(16) DEFAULT NULL,
   `reservationistid` int(16) DEFAULT NULL,
   `numberofparticipants` int(16) DEFAULT NULL,
@@ -76,9 +79,9 @@ CREATE TABLE `meeting` (
   `endtime` datetime DEFAULT NULL,
   `reservationtime` datetime DEFAULT NULL,
   `canceledtime` datetime DEFAULT NULL,
-  `description` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
-  `status` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
-  `canceledreason` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `description` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `status` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `canceledreason` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   PRIMARY KEY (`meetingid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -91,13 +94,15 @@ insert  into `meeting`(`meetingid`,`meetingname`,`roomid`,`reservationistid`,`nu
 DROP TABLE IF EXISTS `meetingparticipants`;
 
 CREATE TABLE `meetingparticipants` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `meetingid` int(16) NOT NULL,
-  `employeeid` int(16) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `employeeid` int(16) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 /*Data for the table `meetingparticipants` */
 
-insert  into `meetingparticipants`(`meetingid`,`employeeid`) values (28,13),(28,23),(28,27),(28,16),(29,16),(29,13),(29,8),(30,15),(30,13),(30,8),(30,23),(27,8),(26,8),(25,8),(28,8),(31,8),(31,17),(31,23),(32,8),(32,17),(33,15),(34,8),(34,17),(35,8),(36,9),(36,8),(37,8),(37,23),(38,11),(38,16),(38,20),(39,13),(40,10),(40,8),(40,9),(41,10),(41,8),(41,9);
+insert  into `meetingparticipants`(`id`,`meetingid`,`employeeid`) values (1,28,13),(2,28,23),(3,28,27),(4,28,16),(5,29,16),(6,29,13),(7,29,8),(8,30,15),(9,30,13),(10,30,8),(11,30,23),(12,27,8),(13,26,8),(14,25,8),(15,28,8),(16,31,8),(17,31,17),(18,31,23),(19,32,8),(20,32,17),(21,33,15),(22,34,8),(23,34,17),(24,35,8),(25,36,9),(26,36,8),(27,37,8),(28,37,23),(29,38,11),(30,38,16),(31,38,20),(32,39,13),(33,40,10),(34,40,8),(35,40,9),(36,41,10),(37,41,8),(38,41,9);
 
 /*Table structure for table `meetingroom` */
 
@@ -106,10 +111,10 @@ DROP TABLE IF EXISTS `meetingroom`;
 CREATE TABLE `meetingroom` (
   `roomid` int(16) NOT NULL AUTO_INCREMENT,
   `roomnum` int(16) NOT NULL,
-  `roomname` varchar(20) CHARACTER SET utf8 NOT NULL,
+  `roomname` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `capacity` int(16) DEFAULT NULL,
-  `status` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
-  `description` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
+  `status` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `description` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`roomid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
@@ -118,5 +123,6 @@ CREATE TABLE `meetingroom` (
 insert  into `meetingroom`(`roomid`,`roomnum`,`roomname`,`capacity`,`status`,`description`) values (5,101,'第一会议室',15,'0','公共会议室'),(6,102,'第二会议室',5,'0','管理部门会议室'),(7,103,'第三会议室',12,'0','市场部专用会议室'),(8,401,'第四会议室',15,'0','公共会议室'),(9,201,'第五会议室',15,'0','最大会议室'),(10,601,'第六会议室',12,'0','需要提前三天预定'),(15,999,'第999会议室',99,'0','第999会议室，哈哈哈哈哈'),(16,998,'第998会议室',98,'1','第998会议室，哈哈哈哈哈'),(17,996,'第996会议室',96,'0','第996666666666666666666666666会议室顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
