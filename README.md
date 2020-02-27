@@ -1,4 +1,4 @@
-扫码加微信，备注meeting，进群讨论。
+扫码加微信（微信ID：**a_java_boy2**），备注meeting，进群讨论。
 
 ![](https://user-images.githubusercontent.com/6023444/75459026-ba70d500-59b9-11ea-8cbd-3d5889f356c4.png)
 
