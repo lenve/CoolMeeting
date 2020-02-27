@@ -1,6 +1,6 @@
 扫码加微信，备注meeting，进群讨论。
 
-![](https://camo.githubusercontent.com/aafedd190e596293f51399c6d0661feeb3ef5e8c/687474703a2f2f7777772e6a617661626f792e6f72672f696d616765732f77656978696e2e706e67)
+![](https://user-images.githubusercontent.com/6023444/75459026-ba70d500-59b9-11ea-8cbd-3d5889f356c4.png)
 
 有暇，搞了个会议管理系统，供刚入行的小伙伴们学习。
 涉及到的技术点：
