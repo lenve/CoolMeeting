@@ -4,11 +4,13 @@
 
 有暇，搞了个会议管理系统，供刚入行的小伙伴们学习。
 涉及到的技术点：
->1.jQuery、Ajax  
->2.jsp  
->3.Servlet、Filter、Listener  
->4.MySql  
->5.JDBC  
+
+- Spring
+- SpringMVC
+- MyBatis
+- Freemarker
+- jQuery+Ajax
+- MySQL
 
 这些都是JavaWeb的基础知识。
 
